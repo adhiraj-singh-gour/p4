@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'pappins','sans-serif';
+
+        }
+        body{
+          min-height: 100vh;  
+        }
+        a{
+            text-decoration: none;
+        }
+        li{
+            list-style: none;
+        }
+        h1,h2{
+            color: #444;
+        }
+        h3{
+            color: #999;
+        }
+        .btn{
+            background: #f05462;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+
+        }
+        .btn:hover{
+            color: #f05462;
+            background: white;
+            border: 1px solid #f05462;
+
+        }
+        .title{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 15px 10px ;
+            border-bottom: 2px solid #999;
+
+        }
+        table{
+            padding: 10px;
+        }
+        th,td{
+            text-align: left;
+            padding: 8px;
+        }
+        .side-menu{
+            position: fixed;
+            background-color: #f05462;
+            width: 20vw;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .side-menu .brand-name{
+            height: 10vh;
+            display: flex;
+            align-items: center;    
+            justify-content: center;
+        }
+        .side-menu li{
+            font-size: 24px;
+            padding: 10px 40px;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        .side-menu li:hover{
+            background: white;
+            color: #f05462;
+        }
+
+        /* contaner */
+
+        .contaner{
+            position: absolute;
+            right: 0;
+            width: 80vw;
+            height: 100vh;
+            background: #f1f1f1;
+
+        }
+        .contaner .header{
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 80vw;
+            height: 10vh;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+        }
+        .contaner .header .nav{
+            width: 90%;
+            display: flex;
+            align-items: center;
+        }
+        .contaner .header .nav .search{
+            flex: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            
+        }
+        .contaner .header .nav .search input[tpye=text]{
+            border: none;
+            background-color: #f1f1f1;
+            padding: 10px;
+            width: 50%;
+        }
+        .contaner .header .nav .search button{
+           width: 60px;
+           height: 40px;
+           border: none;
+           display: flex;
+           align-items: center;
+        }
+        .contaner .header .nav .user{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+        .contaner .header .nav .user .img-case{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            
+        }
+        .contaner .header .nav .user .img{
+            width: 40px;
+            height: 40px;
+
+        }
+        .contaner .header .nav .user .img-case img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+
+
+        /*--- content part--- */
+        .contaner .content{
+            position: relative;
+            margin-top: 10vh;
+            min-height: 90vh;
+        }
+        .contaner .content .cards{
+            padding: 20px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .contaner .content .cards .card{
+            width: 250px;
+            height: 150px;
+            background:white;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0.19);
+            margin: 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .contaner .content .content-2{
+            min-height: 60vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .contaner .content .content-2 .recent-payments{
+            min-height: 50vh;
+            flex: 5;
+            background: white;
+            margin: 0 25px 25px 25px ;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0.19);
+            display: flex;
+            flex-direction: column;
+        }
+        .contaner .content .content-2 .new-students{
+            flex: 2;
+            background: white;
+            min-height: 50vh;
+            margin: 0 25px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0.19);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Brand</h1>
+        </div>
+        <ul>
+            <li>Dashboard</li>
+            <li>Student</li>
+            <li>Teacher</li>
+            <li>Schools</li>
+            <li>Income</li>
+            <li>Help</li>
+        </ul>
+    </div>
+
+    <div class="contaner">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" name="" id="" placeholder="Search..">
+                    <button type="submit">Search</button>
+                </div>
+                <div class="user">
+                    <a href="" class="btn">Add New</a>
+                    <img src="" alt="notification">
+                </div>
+                <div class="img-case">
+                    <img src="" alt="user-img">
+                </div>
+            </div>
+        </div>
+
+        <!----- contaner part------>
+
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="" alt="student">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="" alt="student">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="" alt="student">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <img src="" alt="student">
+                    </div>
+                </div>
+
+                <div class="content-2">
+                    <div class="recent-payments">
+                        <div class="title">
+                            <h1>Recent Payments</h1>
+                            <a href="" class="btn">View all</a>
+                            <table>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>school</th>
+                                    <th>Amount</th>
+                                    <th>Option</th>
+                                    <th>Name</th>
+                                </tr>
+                                <tr>
+                                    <td>jons Doe</td>
+                                    <td>St jams college</td>
+                                    <td>$12</td>
+                                    <td><a href="" class="btn">view</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="new-students">
+                            <div class="title">
+                                <h1>New Student</h1>
+                                <a href="" class="btn">View all</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

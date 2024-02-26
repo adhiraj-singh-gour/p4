@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        #instagram-logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        .post-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .username {
+            font-weight: bold;
+        }
+
+        .post-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .likes {
+            padding: 10px;
+        }
+
+        .caption {
+            padding: 10px;
+        }
+
+        .comments {
+            padding: 10px;
+        }
+
+        .comment {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="instagram-logo" src="instagram-logo.png" alt="Instagram Logo">
+    </header>
+
+    <div class="post-container">
+        <div class="post-header">
+            <img class="user-avatar" src="user-avatar.jpg" alt="User Avatar">
+            <div class="username">username</div>
+        </div>
+        <img class="post-image" src="post-image.jpg" alt="Post Image">
+        <div class="likes">Likes: 100</div>
+        <div class="caption"><span class="username">username</span> Caption for the post.</div>
+        <div class="comments">
+            <div class="comment"><span class="username">user1</span> Comment 1.</div>
+            <div class="comment"><span class="username">user2</span> Comment 2.</div>
+            <!-- Add more comments as needed -->
+        </div>
+    </div>
+
+    <!-- Add more post containers for additional posts -->
+
+</body>
+</html>
