@@ -25,4 +25,5 @@ str1 = "priyansh"
 # print(str1[::-1])
 str1.reverse()
 print(str1)
+print()
 # ######################
